@@ -1,0 +1,16 @@
+/* 스타일시트 */
+body {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+p {
+    font-size: 24px; 
+    font-weight: 600;
+}
