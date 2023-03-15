@@ -110,3 +110,50 @@ text.innerText += solution5(180); //4
 function solution6(angle) {
     return [0, 90, 91, 180].filter(x => angle >= x).length;
 }
+
+//두 수의 나눗셈
+//정수 num1과 num2가 매개변수로 주어질 때, num1을 num2로 나눈 값에 1000 을 곱한 후 정수 부분을 return 하도록 soltuion 함수를 완성해주세요.
+
+function solution7(num1, num2) {
+    var answer = 0;
+    if ((num1 > 0 && num1 <= 100) && (num2 > 0 && num2 <= 100)) {
+        answer = Math.floor((num1 / num2) * 1000)
+        return answer;
+    } else return false
+}
+
+//Math.floor() 주어진 숫자와 같거나 작은 정수중 가장 큰 수를 반환
+//Math.trunc() 주어진 값의 소수 부분 제거하고 정수 부분을 반환한다.
+
+//짝수의 합
+// 정수 n이 주어질 때, n이하의 짝수를 모두 더한 값을 return 하도록 solution 함수를 작성해주세요.
+//let even = 2n;
+
+function solution8(n) {
+    var answer = 0;
+    if (Number.isInteger(n)==true) {
+        if (n > 0 && n <= 1000) {
+                for (var i = 1; i <= n; i++) {
+                    if (i % 2 == 0) {
+                        answer += i;
+                        
+                    }
+                }
+                return answer;
+        } else return false
+    } else return false
+}
+
+//n%2 == 0 짝수  
+// 수열공식 이용해서 푸는 방법도 있음  
+
+// function solution(n) {
+//     var half = Math.floor(n / 2);
+//     return half * (half + 1);
+// }
+
+
+//배열의 평균값
+//정수 배열 numbers가 매개변수로 주어집니다. numbers의 원소의 평균값을 return하도록 solution 함수를 완성해주세요.
+
+
