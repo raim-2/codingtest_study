@@ -63,7 +63,7 @@ function solution4(age) {
     } 
 }
 
-text.innerText = solution4(40);
+//text.innerText = solution4(40);
 
 /* new Date().getFullYear() 
 새로운 Date 생성 +  주어진 날짜의 현지 시간 기준 연도를 반환 */
@@ -97,14 +97,14 @@ function solution5(angle) {
         return answer; //초기값
     }
 }
-
+/*
 text.innerText = solution5(-10); //0
 text.innerText += solution5(20.5); //0
 text.innerText += solution5(20); //1
 text.innerText += solution5(90); //2
 text.innerText += solution5(110); //3
 text.innerText += solution5(180); //4
-
+*/
 
 /*filter 이용해 푸는 경우도 있음*/
 function solution6(angle) {
@@ -156,4 +156,41 @@ function solution8(n) {
 //배열의 평균값
 //정수 배열 numbers가 매개변수로 주어집니다. numbers의 원소의 평균값을 return하도록 solution 함수를 완성해주세요.
 
+// function solutions(n) {
+//     var answer = 0;
+//     for (var i = 0; i <= n; i++) {
+//         answer += i
+//     }
+//     return answer / (n + 1)
+// }
 
+var numbers = [];
+
+function solution9(numbers) {
+    var answer = 0;
+    for (var i = 0; i < numbers.length; i++) {
+        answer += numbers[i];
+    }
+    return answer / (numbers.length)
+}
+
+console.log(solution9([0,1]));
+
+//for of 사용
+
+function solution(numbers) {
+    var answer = 0;
+    for (i of numbers) {
+        answer += i
+    }
+    return answer / numbers.length;
+
+}
+
+//reduce 사용해서 풀수 있음
+function solution(numbers) {
+    var answer = numbers.reduce((a, b) => a + b, 0) / numbers.length;
+    return answer;
+}
+
+//array.reduce() 배열의 각 요소에 대해 주어진 리듀서 함수를 실행하고, 하나의 결과 값을 반환
